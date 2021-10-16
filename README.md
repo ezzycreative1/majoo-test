@@ -8,3 +8,25 @@ Sebelum running project ini, langkah-langkah yang harus dilakukan :
 - running projectnya dengan cara ketik `go run main.go`
 - buka postman 
 - list url nya: 
+
+
+
+# Migration
+
+**to Run migration**
+
+`DBEVENT=migrate go run main.go`
+
+**to rollback**
+
+`DBEVENT=rollback go run main.go`
+
+**to rollback and migration**
+
+`DBEVENT=rollback_migrate go run main.go`
+
+**for dockerfile** 
+
+add `ENV DBEVENT=rollback_migrate`
+
+if you only want to run code, you just have to execute the command `go run main.go`
